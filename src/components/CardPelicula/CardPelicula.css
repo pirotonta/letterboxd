@@ -1,0 +1,81 @@
+.card-pelicula{
+    background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 0.8rem 0.8rem 1.2rem 0.8rem;
+  color: #fff;
+  width: 200px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-pelicula .p{
+    font-size: 0.8rem;
+    color: #ccc;
+    line-height: 1.7rem;
+    text-align: left;
+    width: 100%;
+    margin: 0.2rem 0 0 1rem;
+    display: inline;
+}
+
+.card-pelicula h3{
+    font-size: 1.4rem;
+    margin: 0.4rem 0 0.2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.card-pelicula h4{
+    display:inline;
+}
+
+.card-pelicula:hover{
+    transform: scale(1.01);
+}
+
+.card-pelicula img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.botonesCardPelicula{
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+    display: flex;
+    gap: 0.3rem;
+    z-index: 2;
+}
+
+.card-pelicula .boton .icono{
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.card-pelicula .boton{
+    background-color: #2a2a2a;
+    border: none;
+    padding: 0.2rem;
+    margin: 0;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.card-pelicula .boton:hover{
+    background-color: #3a3a3a;
+    transform: scale(1.05);
+}

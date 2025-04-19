@@ -1,0 +1,43 @@
+.barra-filtros select,
+.barra-filtros input[type="radio"] {
+    background-color: #2a2a2a;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 6px;
+    padding: 4px;
+    font-size: 0.9rem;
+    margin: 10px 0px;
+}
+
+.barra-filtros input[type="radio"]{
+    margin: 0px 5px;
+}
+
+.barra-filtros label {
+    font-weight: 500;
+    margin-right: 0.5rem;
+}
+
+.barra-filtros select:focus,
+.barra-filtros input[type="radio"]:focus {
+  outline: none;
+  border-color: #d7d7d7;
+}
+
+/* .barra-filtros select option{
+    background-color: #2a2a2a;
+    color: #fff;
+} */
+
+.barra-filtros .radio-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.barra-filtros .radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+

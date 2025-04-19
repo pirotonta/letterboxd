@@ -1,0 +1,5 @@
+const ListaPeliculas = ({ props }) => {
+  return (
+    
+  );
+}

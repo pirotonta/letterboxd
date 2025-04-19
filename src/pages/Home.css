@@ -1,0 +1,40 @@
+.principal{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    background-color: #131313;
+    border-radius: 5%;
+    border: 50px solid transparent;
+    border-image: url(../assets/blacklace.png) 17 round;
+    background-clip: padding-box;
+}
+
+.contenedor-pelis{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px 25px 15px;
+}
+
+.contenedor-pelis > * {
+    margin: 30px 10px 10px 10px;
+}
+
+.barras-filtrado{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #1e1e1e;
+    padding: 1rem 1.5rem;
+    margin: 20px 0 10px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+
+
+
+

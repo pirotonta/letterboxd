@@ -1,0 +1,27 @@
+.titulo {
+    font-size: 3.5em;
+    color: #ffffff;
+    text-align: center;
+    margin: 10px 0 20px 0;
+    display: inline;
+    height: 55px;
+}
+
+.barra-titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    margin: 20px 0 10px 0;
+    color: #fff;
+}
+
+
+.barra-titulo img{
+    height: 5em;
+    width: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 0 auto;
+    display: inline;
+}
