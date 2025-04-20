@@ -1,32 +1,43 @@
-
-const pelicula = {
-    id: 0,
-    titulo: "Fantastic Mr. Fox",
-    director: "Wes Anderson",
-    anio: 2009,
-    genero: [7,2],
-    review: 5,
-    urlImg: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7qF6h4q9x3p5lL1a8g0j3j0j0j0.jpg",
-}
-
-    // localStorage.setItem(0, JSON.stringify({
-    //     id: 0,
-    //     titulo: "Fantastic Mr. Fox",
-    //     director: "Wes Anderson",
-    //     anio: 2009,
-    //     genero: [7,2],
-    //     review: 5,
-    //     urlImg: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7qF6h4q9x3p5lL1a8g0j3j0j0j0.jpg",
-    // }));
+// localStorage.setItem(0, JSON.stringify({
+    // id: "0",
+    // tipo: "pelicula",
+    // titulo: "Fantastic Mr. Fox",
+    // director: "Wes Anderson",
+    // anio: 2009,
+    // genero: "Animación",
+    // review: 5,
+    // urlImg: "https://media.themoviedb.org/t/p/w188_and_h282_bestv2/njbTizADSZg4PqeyJdDzZGooikv.jpg",
+    // // }));
 
     // localStorage.setItem(1, JSON.stringify({
-    //         id: 1,
+    //         id: "1",
+    //         tipo: "pelicula",
     //         titulo: "The Lighthouse",
     //         director: "Robert Eggers",
     //         anio: 2019,
-    //         genero: [3,4],
+    //         genero: "Terror",
     //         review: 5,
-    //         urlImg: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7qF6h4q9x3p5lL1a8g0j3j0j0j0.jpg",
+    //         urlImg: "https://media.themoviedb.org/t/p/w600_and_h900_bestv2/f1tIYarTbkBdIT1aW0gzelDwknv.jpg",
     //     }));
 
-localStorage.setItem(0, JSON.stringify(pelicula))
+    // localStorage.setItem(2, JSON.stringify({
+    //         id: "2",
+    //         tipo: "serie",
+    //         titulo: "Twin Peaks",
+    //         director: "David Lynch",
+    //         anio: 1990,
+    //         genero: "Drama",
+    //         review: 5,
+    //         urlImg: "https://media.themoviedb.org/t/p/w600_and_h900_bestv2/lA9CNSdo50iQPZ8A2fyVpMvJZAf.jpg",
+    //     }));
+
+    // localStorage.setItem(3, JSON.stringify({
+    //         id: "3",
+    //         tipo: "pelicula",
+    //         titulo: "Suspiria",
+    //         director: "Dario Argento",
+    //         anio: 1977,
+    //         genero: "Terror",
+    //         review: "no la vi",
+    //         urlImg: "https://media.themoviedb.org/t/p/w600_and_h900_bestv2/5ya8jTbNZTrCFUx9OwpNBjCivXY.jpg",
+    //     }));

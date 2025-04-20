@@ -15,29 +15,30 @@ var Home = () => {
 
     const [peliculas, setPeliculas] = useState([]);
     const [peliculasFiltradas, setPeliculasFiltradas] = useState([]);
-    const [filtro, setFiltro] = useState({barraBusqueda: "", genero: null, tipo: ["pelicula", "serie"], vistas: null, ordenAlfabetico: null, ordenReview: null}); 
+    const [filtro, setFiltro] = useState({ barraBusqueda: "", genero: null, tipo: ["pelicula", "serie"], vistas: null, ordenAlfabetico: null, ordenReview: null });
     const [filtroBotones, setFiltroBotones] = useState([]);
     const [agregarNuevaPelicula, setAgregarNuevaPelicula] = useState(false);
 
     // cargo el localstorage en la renderizacion inicial
     useEffect(() => {
         const peliculasGuardadas = []
-        for (var i=0; i<localStorage.length; i++){
+        for (var i = 0; i < localStorage.length; i++) {
             const pelicula = JSON.parse(localStorage.getItem(i))
             peliculasGuardadas.push(pelicula)
         }
         setPeliculas(peliculasGuardadas)
     }
-    , [])
+        , [])
 
     // para mostrar y ocultar el form con botoncitos
     const mostrarFormularioNuevaPelicula = (agregarNuevaPelicula) => {
-        if (!agregarNuevaPelicula){
+        if (!agregarNuevaPelicula) {
             setAgregarNuevaPelicula(true);
-    }}
+        }
+    }
 
     const ocultarFormularioNuevaPelicula = (agregarNuevaPelicula) => {
-        if (agregarNuevaPelicula){
+        if (agregarNuevaPelicula) {
             setAgregarNuevaPelicula(false);
         }
     }
@@ -56,13 +57,13 @@ var Home = () => {
 
     const onClickEditarHandler = (peliculaModificada) => {
         setPeliculas(peliculas.map(
-          (pelicula) => pelicula.id === peliculaModificada.id ? peliculaModificada : pelicula
+            (pelicula) => pelicula.id === peliculaModificada.id ? peliculaModificada : pelicula
         ));
         localStorage.setItem(peliculaModificada.id, JSON.stringify(peliculaModificada))
     };
 
     const onClickEliminarHandler = (idEliminado) => {
-        if (confirm("desea eliminar esta película?")){
+        if (confirm("desea eliminar esta película?")) {
             setPeliculas(peliculas.filter((pelicula) => {
                 pelicula.id !== idEliminado
             }));
@@ -72,38 +73,36 @@ var Home = () => {
 
     const busquedaHandler = (texto) => {
         setFiltro(prev => ({
-          ...prev,
-          barraBusqueda: texto  
+            ...prev,
+            barraBusqueda: texto
         }));
     };
 
     const filtroGeneroTipoHandler = (filtroKey, target) => {
         setFiltro(prev => {
-          const valor = target.value;
+            const valor = target.value;
 
-          console.log("filtroKey:", filtroKey, "target.value:", target.value, "target.checked:", target.checked);
-            
-          const nuevoFiltro = filtroKey === "tipo" ? {
-            ...prev,
-            [filtroKey]: target.checked 
-              ? [...(prev.tipo || []), valor]
-              : (prev.tipo || []).filter(item => item !== valor) 
-          } : {
-            ...prev,
-            [filtroKey]: valor || null 
-          };
-      
-      
-          return nuevoFiltro;
+            const nuevoFiltro = filtroKey === "tipo" ? {
+                ...prev,
+                [filtroKey]: target.checked
+                    ? [...(prev.tipo || []), valor]
+                    : (prev.tipo || []).filter(item => item !== valor)
+            } : {
+                ...prev,
+                [filtroKey]: valor || null
+            };
+
+
+            return nuevoFiltro;
         });
-      };
-      
-      
-      
+    };
+
+
+
 
     useEffect(() => {
 
-        const nuevoFiltroBotones = {...filtro, ordenAlfabetico: null, ordenReview: null, vistas: null}
+        const nuevoFiltroBotones = { ...filtro, ordenAlfabetico: null, ordenReview: null, vistas: null }
 
         if (filtroBotones.includes("AZ")) {
             nuevoFiltroBotones.ordenAlfabetico = "AZ"
@@ -127,33 +126,33 @@ var Home = () => {
 
     }, [filtroBotones]);
 
-    
+
     useEffect(() => {
         const peliculasFiltradas = peliculas.filter((pelicula) => {
 
-        const peliculasBusqueda = !filtro.barraBusqueda || pelicula.titulo.toLowerCase().includes(filtro.barraBusqueda.toLowerCase())
-        const peliculasGenero = !filtro.genero || pelicula.genero === filtro.genero
-        const peliculasTipo = !filtro.tipo || filtro.tipo.includes(pelicula.tipo)
-        const peliculasVistas = !filtro.vistas || 
-        (filtro.vistas === "vistas" && pelicula.review !== "no la vi") || 
-        (filtro.vistas === "noVistas" && pelicula.review === "no la vi")
+            const peliculasBusqueda = !filtro.barraBusqueda || pelicula.titulo.toLowerCase().includes(filtro.barraBusqueda.toLowerCase())
+            const peliculasGenero = !filtro.genero || pelicula.genero === filtro.genero
+            const peliculasTipo = !filtro.tipo || filtro.tipo.includes(pelicula.tipo)
+            const peliculasVistas = !filtro.vistas ||
+                (filtro.vistas === "vistas" && pelicula.review !== "no la vi") ||
+                (filtro.vistas === "noVistas" && pelicula.review === "no la vi")
 
-        return peliculasBusqueda && peliculasGenero && peliculasTipo && peliculasVistas
+            return peliculasBusqueda && peliculasGenero && peliculasTipo && peliculasVistas
         });
 
         const peliculasOrdenadas = [...peliculasFiltradas];
-        
+
         if (filtro.ordenAlfabetico === "AZ") {
             peliculasOrdenadas.sort((a, b) => a.titulo.localeCompare(b.titulo));
-          } else if (filtro.ordenAlfabetico === "ZA") {
+        } else if (filtro.ordenAlfabetico === "ZA") {
             peliculasOrdenadas.sort((a, b) => b.titulo.localeCompare(a.titulo));
         }
 
         if (filtro.ordenReview === "01") {
             peliculasOrdenadas.sort((a, b) => Number(a.review) - Number(b.review));
-          } else if (filtro.ordenReview === "10") {
+        } else if (filtro.ordenReview === "10") {
             peliculasOrdenadas.sort((a, b) => Number(b.review) - Number(a.review));
-          }
+        }
 
         setPeliculasFiltradas(peliculasOrdenadas);
     }, [peliculas, filtro]);
@@ -161,19 +160,19 @@ var Home = () => {
 
     return (
         <div className="principal">
-            <Titulo texto="letracajxd" logo="src\assets\letracajxd.png"/>
-            
+            <Titulo texto="letracajxd" logo="src\assets\letracajxd.png" />
+
             <div className="barras-filtrado">
-                <BarraBusqueda setBusqueda={busquedaHandler}/>
-                <BarraFiltros filtro={filtro} cambioFiltro={filtroGeneroTipoHandler}/>
+                <BarraBusqueda setBusqueda={busquedaHandler} />
+                <BarraFiltros filtro={filtro} cambioFiltro={filtroGeneroTipoHandler} />
                 <BarraBotones onClickNuevaPelícula={() => mostrarFormularioNuevaPelicula(agregarNuevaPelicula)}
-                    filtroBotonHandler={setFiltroBotones}/>
+                    filtroBotonHandler={setFiltroBotones} />
             </div>
 
 
             {agregarNuevaPelicula && (
                 <Modal cerrarModal={ocultarFormularioNuevaPelicula}>
-                <FormularioEntrada onSubmit={submitFormularioEntradaHandler}/>
+                    <FormularioEntrada onSubmit={submitFormularioEntradaHandler} />
                 </Modal>
             )}
 
@@ -182,10 +181,10 @@ var Home = () => {
                 {peliculasFiltradas.length > 0 ? (
                     (peliculasFiltradas.map((pelicula) => {
                         return (
-                            <CardPelicula key={pelicula.id} id={pelicula.id} imagen={pelicula.urlImg} 
-                            titulo={pelicula.titulo} tipo={pelicula.tipo} director={pelicula.director} anio={pelicula.anio} 
-                            genero={pelicula.genero} review={pelicula.review}
-                            onClickEditarHandler={onClickEditarHandler} onClickEliminarHandler={() => onClickEliminarHandler(pelicula.id)}
+                            <CardPelicula key={pelicula.id} id={pelicula.id} imagen={pelicula.urlImg}
+                                titulo={pelicula.titulo} tipo={pelicula.tipo} director={pelicula.director} anio={pelicula.anio}
+                                genero={pelicula.genero} review={pelicula.review}
+                                onClickEditarHandler={onClickEditarHandler} onClickEliminarHandler={() => onClickEliminarHandler(pelicula.id)}
                             />
                         )
                     }))
@@ -193,7 +192,7 @@ var Home = () => {
                     <div className="no-hay-pelis"> No hay peliculas </div>
                 )}
             </div>
-            
+
 
         </div>
     );
