@@ -17,7 +17,6 @@ Dichas funciones son:
 
 ♡︎ Se proporciona un gran y poderoso filtro donde se pueden filtrar 
 todos los registros existentes a gusto del usuario.
-
 Los filtros disponibles son:
 - Género
 - Tipo (película/serie)
@@ -35,12 +34,12 @@ Todos los filtros seleccionados funcionarán en conjunto.
     
 2. Acceder a la carpeta recién creada con el proyecto,
     e instalar las dependencias necesarias:
-    Node JS -> https://nodejs.org/en/download
-    Lucide -> pnpm install lucide-react
+    - Node JS 🡆 https://nodejs.org/en/download
+    - Lucide 🡆 pnpm install lucide-react
 
 3. Ingresar en la consola los siguientes comandos:
-    npm install
-    npm run dev
+   - npm install
+   - npm run dev
 
 4. Enjoy ૮ ˶ᵔ ᵕ ᵔ˶ ა .ᐟ.ᐟ
 
