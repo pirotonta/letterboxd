@@ -30,7 +30,7 @@
 
 .novista {
   justify-content: center;
-  margin-top: 1.3em;
+  margin-top: 1.15em;
 }
 
 .no-vista:not(:checked)>label:hover {

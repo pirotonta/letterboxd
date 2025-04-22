@@ -29,8 +29,18 @@
     font-weight: 600;
 }
 
+.elh3delmodal{
+    margin: 3rem;
+    font-size: 1.7rem;
+}
+
 .card-pelicula h4 {
     display: inline;
+}
+
+.card-pelicula .el-ojo{
+    width: 1.2rem;
+    margin-bottom: -0.5em;
 }
 
 .card-pelicula:hover {
@@ -78,4 +88,40 @@
 .card-pelicula .boton:hover {
     background-color: rgb(180, 130, 176);
     transform: scale(1.05);
+}
+
+.form-editar {
+    max-width: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.2rem;
+}
+
+.form-editar input {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #442b5f;
+    border: none;
+    border-radius: 0.4rem;
+    padding: 0.4rem;
+    color: #fff;
+    font-size: 0.8rem;
+    outline: none;
+}
+
+.form-editar .img{
+    grid-column: span 2;
+}
+
+.form-editar input:focus {
+    border: 1px solid #a678de;
+    background-color: #503472;
+}
+
+.botones-formulario-editar {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
 }
