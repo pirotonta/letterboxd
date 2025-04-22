@@ -24,14 +24,17 @@
 
 .gato-dialogo-text {
     position: absolute;
-    top: 27px;
-    left: 40px;
-    width: 60%;
+    top: 28px;
+    left: 32px;
+    width: 145px;
+    max-width: 145px;
     text-align: center;
     font-size: 0.8rem;
     font-weight: bold;
     color: #000;
     pointer-events: none;
     z-index: 101;
+    word-wrap: break-word;
+    line-height: 1.1rem;
 }
 

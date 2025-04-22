@@ -17,19 +17,27 @@ const GatoContador = ({ peliculas }) => {
     const noVistasSeries = contar("serie", false);
     const vistasSeries = contar("serie", true);
 
-    const mostrarTexto = (cantidad, tipo) => {
-        let texto = "";
-        if (tipo === "pelicula"){
-            if (cantidad === 1){
-                texto += `1 película`;
-            } else texto += `${cantidad} películas`;
+    const mostrarTexto = (cantidadPeliculas, cantidadSeries, criterio) => {
+        
+        let texto = []
+        let textoFinal = "";
+
+        if (cantidadPeliculas > 0) {
+            texto.push(`${cantidadPeliculas} ${cantidadPeliculas > 1 ? "peliculas" : "pelicula"}`);
         }
-        if (tipo === "serie"){
-            if (cantidad === 1){
-                texto += `y 1 serie`;
-            } else texto += `y ${cantidad} series`;
+
+        if (cantidadSeries > 0) {
+            texto.push(`${cantidadSeries} ${cantidadSeries > 1 ? "series" : "serie"}`);
         }
-        return texto;
+
+        if (texto.length === 0){
+            (criterio === "vistas") ? textoFinal = "no viste ninguna peli ni serie!" : textoFinal = "no tenés nada en tu watchlist!"
+        } else {
+            const textoJuntito = texto.join(" y ");
+            (criterio === "vistas") ? textoFinal = `ya viste ${textoJuntito}!` : textoFinal = `tenés ${textoJuntito} en tu watchlist!`
+        }
+
+        return textoFinal;
     };
 
     const bongoCat = {
@@ -50,8 +58,8 @@ const GatoContador = ({ peliculas }) => {
                 <img src="https://i.imgur.com/cqBrsZW.png" alt="dialogo" className="gato-dialogo-img"/>
                 <div className="gato-dialogo-text">
                     {gatoVista
-                        ? `viste ${mostrarTexto(vistasPeliculas, "pelicula")} ${mostrarTexto(vistasSeries, "serie")}!`
-                        : `tenes ${mostrarTexto(noVistasPeliculas, "pelicula")} ${mostrarTexto(noVistasSeries, "serie")} en la watchlist!`}
+                        ? mostrarTexto(vistasPeliculas, vistasSeries, "vistas")
+                        : mostrarTexto(noVistasPeliculas, noVistasSeries, "no vistas")}
                 </div>
             </div>
 
