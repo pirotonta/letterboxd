@@ -148,16 +148,21 @@ var Home = () => {
 
         const peliculasOrdenadas = [...peliculasFiltradas];
 
-        if (filtro.ordenAlfabetico === "AZ") {
-            peliculasOrdenadas.sort((a, b) => a.titulo.localeCompare(b.titulo));
-        } else if (filtro.ordenAlfabetico === "ZA") {
-            peliculasOrdenadas.sort((a, b) => b.titulo.localeCompare(a.titulo));
+        if (filtro.ordenAlfabetico) {
+            const ascendente = filtro.ordenAlfabetico === "AZ";
+            peliculasOrdenadas.sort((a, b) =>
+                ascendente ? a.titulo.localeCompare(b.titulo) : b.titulo.localeCompare(a.titulo)
+            );
         }
 
-        if (filtro.ordenReview === "01") {
-            peliculasOrdenadas.sort((a, b) => Number(a.review) - Number(b.review));
-        } else if (filtro.ordenReview === "10") {
-            peliculasOrdenadas.sort((a, b) => Number(b.review) - Number(a.review));
+        if (filtro.ordenReview) {
+            const ascendente = filtro.ordenReview === "01";
+            peliculasOrdenadas.sort((a, b) => {
+                // el -1 y 6 para mandarlas al top o al bottom
+                const aVal = a.review === "no la vi" ? (ascendente ? 6 : -1) : Number(a.review);
+                const bVal = b.review === "no la vi" ? (ascendente ? 6 : -1) : Number(b.review);
+                return ascendente ? aVal - bVal : bVal - aVal;
+            });
         }
 
         setPeliculasFiltradas(peliculasOrdenadas);
