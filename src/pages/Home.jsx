@@ -27,14 +27,11 @@ var Home = () => {
             });
             setPeliculas(mockdata);
         } else {
-            Object.keys(localStorage).map((key) => {
-                const pelicula = JSON.parse(localStorage.getItem(key));
-                console.log(pelicula)
-                peliculasGuardadas.push(pelicula);
+            const peliculasGuardadas = Object.keys(localStorage).map((key) => {
+                return JSON.parse(localStorage.getItem(key));
             });
+            setPeliculas(peliculasGuardadas);
         }
-
-        setPeliculas(peliculasGuardadas);
     }, [])
 
     // para mostrar y ocultar el form con botoncitos
