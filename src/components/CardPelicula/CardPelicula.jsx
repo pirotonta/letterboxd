@@ -1,6 +1,7 @@
 import './CardPelicula.css';
 import Boton from "../Boton/Boton";
-import { Save } from 'lucide-react';
+import Modal from "../Modalcito/Modal";
+import { Check, Save } from 'lucide-react';
 import { XCircle } from 'lucide-react';
 import { Pencil } from "lucide-react";
 import { Trash2 } from "lucide-react";
@@ -10,6 +11,7 @@ import { useState } from 'react';
 
 const CardPelicula = ({ id, imagen, titulo, tipo, director, anio, genero, review, onClickEditarHandler, onClickEliminarHandler }) => {
     const [editarPelicula, setEditarPelicula] = useState(false)
+    const [eliminarPelicula, setEliminarPelicula] = useState(false)
     const [pelicula, setPelicula] = useState({
         id: id,
         urlImg: imagen,
@@ -33,6 +35,11 @@ const CardPelicula = ({ id, imagen, titulo, tipo, director, anio, genero, review
         submit.preventDefault()
         onClickEditarHandler(pelicula)
         setEditarPelicula(false)
+    }
+
+    const eliminarHandler = () => {
+        onClickEliminarHandler(id)
+        setEliminarPelicula(false)
     }
 
     return (
@@ -74,8 +81,16 @@ const CardPelicula = ({ id, imagen, titulo, tipo, director, anio, genero, review
                 {/* agregar componentes de botones con funciones onclick */}
                 <div className="botonesCardPelicula">
                     <Boton texto="Editar contenido" icon={Pencil} onClick={() => setEditarPelicula(true)} />
-                    <Boton texto="Eliminar" icon={Trash2} onClick={onClickEliminarHandler} />
+                    <Boton texto="Eliminar" icon={Trash2} onClick={() => setEliminarPelicula(true)} />
                 </div>
+
+                {eliminarPelicula && (
+                    <Modal cerrarModal={() => setEliminarPelicula(false)}>
+                        <p>eliminar la película {titulo}?</p>
+                        <Boton texto="confirmar" icon={Check} onClick={eliminarHandler}/>
+                        <Boton texto="cancelar" icon={XCircle} onClick={() => setEliminarPelicula(false)} />
+                    </Modal>
+                )}
             </div>
         )
     )

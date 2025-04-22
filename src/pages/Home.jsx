@@ -5,7 +5,6 @@ import CardPelicula from '../components/CardPelicula/CardPelicula.jsx'
 import BarraBusqueda from '../components/BarraBusqueda/BarraBusqueda.jsx'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import { useRef } from 'react'
 import BarraBotones from '../components/BarraBotones/BarraBotones.jsx'
 import BarraFiltros from '../components/BarraFiltros/BarraFiltros.jsx'
 import Modal from '../components/Modalcito/Modal.jsx'
@@ -28,12 +27,14 @@ var Home = () => {
             });
             setPeliculas(mockdata);
         } else {
-            for (let i = 0; i < localStorage.length; i++) {
-                const pelicula = JSON.parse(localStorage.getItem(i))
-                peliculasGuardadas.push(pelicula)
-            }
-            setPeliculas(peliculasGuardadas)
+            Object.keys(localStorage).map((key) => {
+                const pelicula = JSON.parse(localStorage.getItem(key));
+                console.log(pelicula)
+                peliculasGuardadas.push(pelicula);
+            });
         }
+
+        setPeliculas(peliculasGuardadas);
     }, [])
 
     // para mostrar y ocultar el form con botoncitos
@@ -68,13 +69,9 @@ var Home = () => {
         localStorage.setItem(peliculaModificada.id, JSON.stringify(peliculaModificada))
     };
 
-    const onClickEliminarHandler = (idEliminado) => {
-        if (confirm("desea eliminar esta película?")) {
-            setPeliculas(peliculas.filter((pelicula) => {
-                pelicula.id !== idEliminado
-            }));
-            localStorage.removeItem(idEliminado)
-        } else console.log("aa")
+    const onClickEliminarHandler = (id) => {
+        setPeliculas(prev => prev.filter((pelicula) => pelicula.id !== id));
+        localStorage.removeItem(id);
     }
 
     const busquedaHandler = (texto) => {
@@ -194,7 +191,7 @@ var Home = () => {
                             <CardPelicula key={pelicula.id} id={pelicula.id} imagen={pelicula.urlImg}
                                 titulo={pelicula.titulo} tipo={pelicula.tipo} director={pelicula.director} anio={pelicula.anio}
                                 genero={pelicula.genero} review={pelicula.review}
-                                onClickEditarHandler={onClickEditarHandler} onClickEliminarHandler={() => onClickEliminarHandler(pelicula.id)}
+                                onClickEditarHandler={onClickEditarHandler} onClickEliminarHandler={onClickEliminarHandler}
                             />
                         )
                     }))
