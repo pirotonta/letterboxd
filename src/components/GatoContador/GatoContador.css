@@ -1,6 +1,6 @@
 .gato-contador img {
     position: absolute;
-    top: -54px;
+    top: -53px;
     left: 80%;
     transform: rotate(-13deg); /* center and rotate */
     width: 125px; /* a6djust size to fit well */

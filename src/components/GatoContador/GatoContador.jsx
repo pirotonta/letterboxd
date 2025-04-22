@@ -33,8 +33,8 @@ const GatoContador = ({ peliculas }) => {
     };
 
     const bongoCat = {
-        vistas: "https://i.imgur.com/DshD8Yf.png",
-        noVistas: "https://i.imgur.com/imFQVFe.png"
+        vistas: "https://i.imgur.com/Ybcw3Gv.png",
+        noVistas: "https://i.imgur.com/wCELf0p.png"
     }
 
     const handleClickGato = () => {
