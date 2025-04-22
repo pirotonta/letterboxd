@@ -37,6 +37,7 @@ var Home = () => {
         var formData = new FormData(submit.target)
         const data = Object.fromEntries(formData.entries())
         agregarPelicula(data)
+        setAgregarNuevaPelicula(false)
     }
 
     const onClickEditarHandler = (peliculaModificada) => {
