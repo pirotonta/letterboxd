@@ -9,10 +9,9 @@ import { useRef } from 'react'
 import BarraBotones from '../components/BarraBotones/BarraBotones.jsx'
 import BarraFiltros from '../components/BarraFiltros/BarraFiltros.jsx'
 import Modal from '../components/Modalcito/Modal.jsx'
-
+import mockdata from '../mocks/mockdata.json'
 
 var Home = () => {
-
     const [peliculas, setPeliculas] = useState([]);
     const [peliculasFiltradas, setPeliculasFiltradas] = useState([]);
     const [filtro, setFiltro] = useState({ barraBusqueda: "", genero: null, tipo: ["pelicula", "serie"], vistas: null, ordenAlfabetico: null, ordenReview: null });
@@ -22,13 +21,20 @@ var Home = () => {
     // cargo el localstorage en la renderizacion inicial
     useEffect(() => {
         const peliculasGuardadas = []
-        for (var i = 0; i < localStorage.length; i++) {
-            const pelicula = JSON.parse(localStorage.getItem(i))
-            peliculasGuardadas.push(pelicula)
+
+        if (localStorage.length === 0) {
+            mockdata.forEach((pelicula, index) => {
+                localStorage.setItem(index, JSON.stringify(pelicula));
+            });
+            setPeliculas(mockdata);
+        } else {
+            for (let i = 0; i < localStorage.length; i++) {
+                const pelicula = JSON.parse(localStorage.getItem(i))
+                peliculasGuardadas.push(pelicula)
+            }
+            setPeliculas(peliculasGuardadas)
         }
-        setPeliculas(peliculasGuardadas)
-    }
-        , [])
+    }, [])
 
     // para mostrar y ocultar el form con botoncitos
     const mostrarFormularioNuevaPelicula = (agregarNuevaPelicula) => {
