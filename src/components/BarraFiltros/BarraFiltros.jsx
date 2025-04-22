@@ -1,7 +1,7 @@
 import './BarraFiltros.css';
 import React from 'react';
 
-const BarraFiltros = ({ cambioFiltro , filtro}) => {
+const BarraFiltros = ({ cambioFiltro, filtro }) => {
 
     return (
         <div className="barra-filtros">

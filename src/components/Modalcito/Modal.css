@@ -11,8 +11,8 @@
     z-index: 1000;
 }
 
-.modal-contenido{
-    background-color: #1f1f1f;
+.modal-contenido {
+    background-color: #151116;
     padding: 2rem;
     border-radius: 16px;
     max-width: 500px;
@@ -23,7 +23,7 @@
     z-index: 1001;
 }
 
-.el-boton .boton{
+.el-boton .boton {
     position: absolute;
     top: 1rem;
     right: 1rem;

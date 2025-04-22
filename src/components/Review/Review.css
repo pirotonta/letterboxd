@@ -1,63 +1,64 @@
+.stars,
+.no-vista {
+  border: none;
+  float: left;
+}
 
-  
-  .stars, .no-vista {
-    border: none;
-    float: left;
-  }
-  
-  .stars > label, .no-vista > label {
-    color: #90A0A3;
-    float: right;
-  }
-  
-  .stars > label:before {
-    margin: 5px;
-    font-size: 2em;
-    content: '\2605';
-    display: inline-block;
-  }
+.stars>label,
+.no-vista>label {
+  color: #90A0A3;
+  float: right;
+}
 
-  .no-vista > label:before{
-    font-size: 2em;
-    display: inline-block;
-    height: 12em;
-  }
-  
-  .stars > input, .no-vista > input {
-    display: none;
-  }
+.stars>label:before {
+  margin: 5px;
+  font-size: 2em;
+  content: '\2605';
+  display: inline-block;
+}
 
-  .novista{
-    justify-content: center;
-    margin-top: 1.3em;
-  }
+.no-vista>label:before {
+  font-size: 2em;
+  display: inline-block;
+  height: 12em;
+}
 
-  .no-vista:not(:checked) > label:hover{
-    color: #ffffff;
-  }
+.stars>input,
+.no-vista>input {
+  display: none;
+}
 
-  .no-vista > input:checked ~ label,
-  .no-vista:not(:checked) > label:hover,
-  .no-vista:not(:checked) > label:hover ~ label{
-    color: #ffffff;
-  }
+.novista {
+  justify-content: center;
+  margin-top: 1.3em;
+}
 
-  .no-vista > input:checked + label:hover,
-  .no-vista > input:checked ~ label:hover,
-  .no-vista > label:hover ~ input:checked ~ label,
-  .no-vista > input:checked ~ label:hover ~ label {
-    color: #515151;
-  }
+.no-vista:not(:checked)>label:hover {
+  color: #ffffff;
+}
 
-  .stars > input:checked ~ label,
-  .stars:not(:checked) > label:hover,
-  .stars:not(:checked) > label:hover ~ label{
-    color: #ffffff;
-  }
-  
-  .stars > input:checked + label:hover,
-  .stars > input:checked ~ label:hover,
-  .stars > label:hover ~ input:checked ~ label,
-  .stars > input:checked ~ label:hover ~ label {
-    color: #515151;
-  }
+.no-vista>input:checked~label,
+.no-vista:not(:checked)>label:hover,
+.no-vista:not(:checked)>label:hover~label {
+  color: rgb(180, 130, 176);
+}
+
+.no-vista>input:checked+label:hover,
+.no-vista>input:checked~label:hover,
+.no-vista>label:hover~input:checked~label,
+.no-vista>input:checked~label:hover~label {
+  color: #515151;
+}
+
+.stars>input:checked~label,
+.stars:not(:checked)>label:hover,
+.stars:not(:checked)>label:hover~label {
+  color: rgb(180, 130, 176);
+}
+
+.stars>input:checked+label:hover,
+.stars>input:checked~label:hover,
+.stars>label:hover~input:checked~label,
+.stars>input:checked~label:hover~label {
+  color: #515151;
+}

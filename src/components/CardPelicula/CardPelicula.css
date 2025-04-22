@@ -1,18 +1,18 @@
-.card-pelicula{
-    background-color: #1e1e1e;
-  border-radius: 12px;
-  padding: 0.8rem 0.8rem 1.2rem 0.8rem;
-  color: #fff;
-  width: 200px;
-  position: relative;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
+.card-pelicula {
+    background-color: #3a2b3f;
+    border-radius: 12px;
+    padding: 0.8rem 0.8rem 1.2rem 0.8rem;
+    color: #fff;
+    width: 200px;
+    position: relative;
+    box-shadow: 0 4px 10px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.card-pelicula .p{
+.card-pelicula .p {
     font-size: 0.8rem;
     color: #ccc;
     line-height: 1.7rem;
@@ -22,29 +22,29 @@
     display: inline;
 }
 
-.card-pelicula h3{
+.card-pelicula h3 {
     font-size: 1.4rem;
     margin: 0.4rem 0 0.2rem;
     text-align: center;
     font-weight: 600;
 }
 
-.card-pelicula h4{
-    display:inline;
+.card-pelicula h4 {
+    display: inline;
 }
 
-.card-pelicula:hover{
+.card-pelicula:hover {
     transform: scale(1.01);
 }
 
-.card-pelicula img{
+.card-pelicula img {
     width: 100%;
     height: auto;
     border-radius: 10px;
     object-fit: cover;
 }
 
-.botonesCardPelicula{
+.botonesCardPelicula {
     position: absolute;
     top: 0.4rem;
     right: 0.4rem;
@@ -53,17 +53,17 @@
     z-index: 2;
 }
 
-.card-pelicula .boton .icono{
-    color: #fff;
+.card-pelicula .boton .icono {
+    background-color: #1e1820;
     font-size: 1.2rem;
     cursor: pointer;
 }
 
-.card-pelicula .boton{
-    background-color: #2a2a2a;
-    border: none;
+.card-pelicula .boton {
+    background-color: #1e1820;
     padding: 0.2rem;
     margin: 0;
+    border: 1px solid rgb(180, 130, 176);
     border-radius: 5px;
     color: #fff;
     cursor: pointer;
@@ -75,7 +75,7 @@
     transition: background-color 0.3s ease;
 }
 
-.card-pelicula .boton:hover{
-    background-color: #3a3a3a;
+.card-pelicula .boton:hover {
+    background-color: rgb(180, 130, 176);
     transform: scale(1.05);
 }

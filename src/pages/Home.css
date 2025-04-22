@@ -1,32 +1,33 @@
-.principal{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content: center;
-    background-color: #131313;
-    border-radius: 5%;
+.principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #151116;
     border: 50px solid transparent;
-    border-image: url(../assets/blacklace.png) 17 round;
+    border-image: url(../assets/blacklace.png) 18 round;
     background-clip: padding-box;
+    min-width: 1200px;
+    min-height: 1000px;
 }
 
-.contenedor-pelis{
-    display:flex;
-    flex-wrap:wrap;
+.contenedor-pelis {
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     padding: 0 15px 25px 15px;
 }
 
-.contenedor-pelis > * {
+.contenedor-pelis>* {
     margin: 30px 10px 10px 10px;
 }
 
-.barras-filtrado{
+.barras-filtrado {
     display: flex;
     align-items: center;
     gap: 1rem;
-    background-color: #1e1e1e;
+    background-color: #3a2b3f;
     padding: 1rem 1.5rem;
     margin: 20px 0 10px 0;
     border-radius: 12px;
@@ -34,7 +35,8 @@
     color: #fff;
 }
 
-
-
-
-
+.no-hay-pelis {
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 50px;
+}

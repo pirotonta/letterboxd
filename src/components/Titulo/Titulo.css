@@ -3,12 +3,12 @@
     color: #ffffff;
     text-align: center;
     margin: 10px 0 20px 0;
-    display: inline;
     height: 55px;
 }
 
-.barra-titulo{
+.barra-titulo {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 1rem 1.5rem;
@@ -16,8 +16,7 @@
     color: #fff;
 }
 
-
-.barra-titulo img{
+.barra-titulo img {
     height: 5em;
     width: auto;
     border-radius: 10px;

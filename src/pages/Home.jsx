@@ -166,7 +166,7 @@ var Home = () => {
 
     return (
         <div className="principal">
-            <Titulo texto="letracajxd" logo="src\assets\letracajxd.png" />
+            <Titulo texto="quiero dormir" logo="src\assets\icono.png" />
 
             <div className="barras-filtrado">
                 <BarraBusqueda setBusqueda={busquedaHandler} />
@@ -175,13 +175,11 @@ var Home = () => {
                     filtroBotonHandler={setFiltroBotones} />
             </div>
 
-
             {agregarNuevaPelicula && (
                 <Modal cerrarModal={ocultarFormularioNuevaPelicula}>
                     <FormularioEntrada onSubmit={submitFormularioEntradaHandler} />
                 </Modal>
             )}
-
 
             <div className="contenedor-pelis">
                 {peliculasFiltradas.length > 0 ? (
@@ -195,11 +193,9 @@ var Home = () => {
                         )
                     }))
                 ) : (
-                    <div className="no-hay-pelis"> No hay peliculas </div>
+                    <div className="no-hay-pelis"> No hay películas o series para mostrar.</div>
                 )}
             </div>
-
-
         </div>
     );
 }
