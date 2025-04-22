@@ -1,5 +1,6 @@
 .barra-botones {
     gap: 0.5rem;
     margin-left: auto;
+    z-index: 101;
 }
 

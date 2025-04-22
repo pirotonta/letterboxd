@@ -1,0 +1,37 @@
+.gato-contador img {
+    position: absolute;
+    top: -54px;
+    left: 80%;
+    transform: rotate(-13deg); /* center and rotate */
+    width: 125px; /* a6djust size to fit well */
+    z-index:100;
+}
+
+.gato-contador img:hover {
+    cursor: pointer;
+}
+
+.gato-dialogo img{
+    width: 210px;
+    z-index: 100; /* higher than the image */
+}
+
+.gato-dialogo{
+    position: absolute;
+    top: -130px;
+    left: 88%
+}
+
+.gato-dialogo-text {
+    position: absolute;
+    top: 27px;
+    left: 40px;
+    width: 60%;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #000;
+    pointer-events: none;
+    z-index: 101;
+}
+

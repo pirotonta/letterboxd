@@ -8,8 +8,8 @@ import { useEffect } from 'react'
 import BarraBotones from '../components/BarraBotones/BarraBotones.jsx'
 import BarraFiltros from '../components/BarraFiltros/BarraFiltros.jsx'
 import Modal from '../components/Modalcito/Modal.jsx'
-import mockdata from '../mocks/mockdata.json'
 import usePelicula from '../hooks/usePelicula.jsx'
+import GatoContador from '../components/GatoContador/GatoContador.jsx'
 
 var Home = () => {
     const {peliculas, agregarPelicula, editarPelicula, eliminarPelicula} = usePelicula()
@@ -146,6 +146,7 @@ var Home = () => {
             <Titulo texto="pelis & series" logo="https://i.imgur.com/n2PlzFV.png" />
 
             <div className="barras-filtrado">
+                <GatoContador peliculas={peliculas}/>
                 <BarraBusqueda setBusqueda={busquedaHandler} />
                 <BarraFiltros filtro={filtro} cambioFiltro={filtroGeneroTipoHandler} />
                 <BarraBotones onClickNuevaPelícula={() => mostrarFormularioNuevaPelicula(agregarNuevaPelicula)}
@@ -157,6 +158,10 @@ var Home = () => {
                     <FormularioEntrada onSubmit={submitFormularioEntradaHandler} />
                 </Modal>
             )}
+
+            <div className="contador-filtradas">
+                mostrando {peliculasFiltradas.length} de {peliculas.length} películas/series
+            </div>
 
             <div className="contenedor-pelis">
                 {peliculasFiltradas.length > 0 ? (
