@@ -27,6 +27,10 @@ Los filtros disponibles son:
 
 Todos los filtros seleccionados funcionarán en conjunto.
 
+<p align="center">
+    <img src="./src/assets/appreact.gif" width="500px"/>
+</p>
+
 # ୨ৎ Instrucciones de instalación ᰔ ˶ᵔ ᵕ ᵔ˶.ᐟ
 1. Dentro de tu IDE de preferencia, posicionarte 
     en la carpeta donde deseas guardar el proyecto.
@@ -35,7 +39,7 @@ Todos los filtros seleccionados funcionarán en conjunto.
 2. Acceder a la carpeta recién creada con el proyecto,
     e instalar las dependencias necesarias:
     - Node JS 🡆 https://nodejs.org/en/download
-    - Lucide 🡆 pnpm install lucide-react
+    - Lucide 🡆 npm install lucide-react
 
 3. Ingresar en la consola los siguientes comandos:
    - npm install
