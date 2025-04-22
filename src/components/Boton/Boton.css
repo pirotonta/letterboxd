@@ -7,18 +7,24 @@
 }
 
 .boton:hover {
-    background-color: rgb(180, 130, 176);
+    background-color: rgb(222, 179, 219);
     transform: scale(1.05);
 }
 
 .boton,
 .boton:hover {
-    border: 1px solid rgb(180, 130, 176);
+    border: 1px solid rgb(222, 179, 219);
     border-radius: 5px;
 }
 
 .boton.active {
     background-color: rgb(180, 130, 176);
+    border-color: #ffffff;
+    transform: scale(1.05);
+}
+
+.boton.active:hover {
+    background-color: rgb(222, 179, 219);
     border-color: #ffffff;
     transform: scale(1.05);
 }
