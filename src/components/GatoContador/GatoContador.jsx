@@ -4,7 +4,7 @@ import './GatoContador.css';
 
 const GatoContador = ({ peliculas }) => {
 
-    const [gatoVista, setGatoVistas] = useState(false);
+    const [gatoVista, setGatoVistas] = useState(true);
 
     const contar = (tipo, vista) => {
         return peliculas.filter(
