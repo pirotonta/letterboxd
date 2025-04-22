@@ -137,6 +137,7 @@ var Home = () => {
         const peliculasFiltradas = peliculas.filter((pelicula) => {
 
             const peliculasBusqueda = !filtro.barraBusqueda || pelicula.titulo.toLowerCase().includes(filtro.barraBusqueda.toLowerCase())
+            || pelicula.director.toLowerCase().includes(filtro.barraBusqueda.toLowerCase())
             const peliculasGenero = !filtro.genero || pelicula.genero === filtro.genero
             const peliculasTipo = !filtro.tipo || filtro.tipo.includes(pelicula.tipo)
             const peliculasVistas = !filtro.vistas ||
