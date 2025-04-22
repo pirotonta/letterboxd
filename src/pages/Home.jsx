@@ -9,30 +9,15 @@ import BarraBotones from '../components/BarraBotones/BarraBotones.jsx'
 import BarraFiltros from '../components/BarraFiltros/BarraFiltros.jsx'
 import Modal from '../components/Modalcito/Modal.jsx'
 import mockdata from '../mocks/mockdata.json'
+import usePelicula from '../hooks/usePelicula.jsx'
 
 var Home = () => {
-    const [peliculas, setPeliculas] = useState([]);
+    const {peliculas, agregarPelicula, editarPelicula, eliminarPelicula} = usePelicula()
     const [peliculasFiltradas, setPeliculasFiltradas] = useState([]);
     const [filtro, setFiltro] = useState({ barraBusqueda: "", genero: null, tipo: ["pelicula", "serie"], vistas: null, ordenAlfabetico: null, ordenReview: null });
     const [filtroBotones, setFiltroBotones] = useState([]);
     const [agregarNuevaPelicula, setAgregarNuevaPelicula] = useState(false);
 
-    // cargo el localstorage en la renderizacion inicial
-    useEffect(() => {
-        const peliculasGuardadas = []
-
-        if (localStorage.length === 0) {
-            mockdata.forEach((pelicula, index) => {
-                localStorage.setItem(index, JSON.stringify(pelicula));
-            });
-            setPeliculas(mockdata);
-        } else {
-            const peliculasGuardadas = Object.keys(localStorage).map((key) => {
-                return JSON.parse(localStorage.getItem(key));
-            });
-            setPeliculas(peliculasGuardadas);
-        }
-    }, [])
 
     // para mostrar y ocultar el form con botoncitos
     const mostrarFormularioNuevaPelicula = (agregarNuevaPelicula) => {
@@ -49,26 +34,17 @@ var Home = () => {
 
     const submitFormularioEntradaHandler = (submit) => {
         submit.preventDefault()
-        var cantidadPelis = localStorage.length
         var formData = new FormData(submit.target)
-        formData.append('id', cantidadPelis)
         const data = Object.fromEntries(formData.entries())
-        localStorage.setItem(cantidadPelis, JSON.stringify(data))
-        // reemplazo el array peliculas por una copia de peliculas y la pelicula ingresada
-        setPeliculas([...peliculas, data])
-        ocultarFormularioNuevaPelicula(agregarNuevaPelicula)
+        agregarPelicula(data)
     }
 
     const onClickEditarHandler = (peliculaModificada) => {
-        setPeliculas(peliculas.map(
-            (pelicula) => pelicula.id === peliculaModificada.id ? peliculaModificada : pelicula
-        ));
-        localStorage.setItem(peliculaModificada.id, JSON.stringify(peliculaModificada))
+        editarPelicula(peliculaModificada)
     };
 
     const onClickEliminarHandler = (id) => {
-        setPeliculas(prev => prev.filter((pelicula) => pelicula.id !== id));
-        localStorage.removeItem(id);
+        eliminarPelicula(id)
     }
 
     const busquedaHandler = (texto) => {
