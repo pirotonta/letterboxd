@@ -169,7 +169,7 @@ var Home = () => {
 
     return (
         <div className="principal">
-            <Titulo texto="quiero dormir" logo="src\assets\icono.png" />
+            <Titulo texto="pelis & series" logo="https://i.imgur.com/n2PlzFV.png" />
 
             <div className="barras-filtrado">
                 <BarraBusqueda setBusqueda={busquedaHandler} />
