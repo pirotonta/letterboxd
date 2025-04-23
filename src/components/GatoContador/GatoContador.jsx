@@ -18,19 +18,19 @@ const GatoContador = ({ peliculas }) => {
     const vistasSeries = contar("serie", true);
 
     const mostrarTexto = (cantidadPeliculas, cantidadSeries, criterio) => {
-        
+
         let texto = []
         let textoFinal = "";
 
         if (cantidadPeliculas > 0) {
-            texto.push(`${cantidadPeliculas} ${cantidadPeliculas > 1 ? "peliculas" : "pelicula"}`);
+            texto.push(`${cantidadPeliculas} ${cantidadPeliculas > 1 ? "películas" : "película"}`);
         }
 
         if (cantidadSeries > 0) {
             texto.push(`${cantidadSeries} ${cantidadSeries > 1 ? "series" : "serie"}`);
         }
 
-        if (texto.length === 0){
+        if (texto.length === 0) {
             (criterio === "vistas") ? textoFinal = "no viste ninguna peli ni serie!" : textoFinal = "no tenés nada en tu watchlist!"
         } else {
             const textoJuntito = texto.join(" y ");
@@ -55,7 +55,7 @@ const GatoContador = ({ peliculas }) => {
                 <img src={gatoVista ? bongoCat.vistas : bongoCat.noVistas} alt="Gato contador" className="gato-contador-img" onClick={handleClickGato} />
             </div>
             <div className="gato-dialogo">
-                <img src="https://i.imgur.com/cqBrsZW.png" alt="dialogo" className="gato-dialogo-img"/>
+                <img src="https://i.imgur.com/cqBrsZW.png" alt="dialogo" className="gato-dialogo-img" />
                 <div className="gato-dialogo-text">
                     {gatoVista
                         ? mostrarTexto(vistasPeliculas, vistasSeries, "vistas")
