@@ -1,6 +1,7 @@
 import './CardPelicula.css';
 import Boton from "../Boton/Boton";
 import Modal from "../Modalcito/Modal";
+import Review from '../Review/Review';
 import { Check, Save } from 'lucide-react';
 import { XCircle } from 'lucide-react';
 import { Pencil } from "lucide-react";
@@ -48,12 +49,33 @@ const CardPelicula = ({ id, imagen, titulo, tipo, director, anio, genero, review
                 <img src={imagen} width="150" height="225"></img>
                 <form onSubmit={submitHandler} className="form-editar">
                     <input className="img" name="urlImg" value={pelicula.urlImg} onChange={cambiosHandler} />
-                    <input name="tipo" value={pelicula.tipo} onChange={cambiosHandler} />
-                    <input name="anio" value={pelicula.anio} onChange={cambiosHandler} />
+                    <select name="tipo" value={pelicula.tipo} onChange={cambiosHandler}>
+                        <option value="pelicula">pelicula</option>
+                        <option value="serie">serie</option>
+                    </select>
+                    {/* <input name="tipo" value={pelicula.tipo} onChange={cambiosHandler} /> */}
                     <input name="titulo" value={pelicula.titulo} onChange={cambiosHandler} />
                     <input name="director" value={pelicula.director} onChange={cambiosHandler} />
-                    <input name="genero" value={pelicula.genero} onChange={cambiosHandler} />
-                    <input name="review" value={pelicula.review} onChange={cambiosHandler} />
+                    <input name="anio" value={pelicula.anio} onChange={cambiosHandler} />
+                    {/* <input name="genero" value={pelicula.genero} onChange={cambiosHandler} /> */}
+                    <select name="genero" value={pelicula.genero} onChange={cambiosHandler}>
+                        <option value="Acción">Acción</option>
+                        <option value="Comedia">Comedia</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Terror">Terror</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Ciencia Ficción">Ciencia Ficción</option>
+                        <option value="Animación">Animación</option>
+                        <option value="Fantasía">Fantasía</option>
+                    </select>
+                    <select name="review" value={pelicula.review} onChange={cambiosHandler}>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="no la vi">no la vi</option>
+                    </select>
                     <div className="botones-formulario-editar">
                     <Boton texto="Guardar" icon={Save} onClick={submitHandler} />
                     <Boton texto="Cancelar" icon={XCircle} onClick={() => setEditarPelicula(false)} />
