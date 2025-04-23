@@ -10,7 +10,7 @@ const Modal = ({ children, cerrarModal }) => {
                 <div className="el-boton">
                     <Boton texto="Cerrar" icon={CircleX} onClick={cerrarModal} className="boton-cerrar" />
                 </div>
-                <div className="el-contenido-fr" onClick={(e) => e.stopPropagation()}>
+                <div className="el-contenido-fr" onClick={(event) => event.stopPropagation()}>
                     {children}
                 </div>
             </div>

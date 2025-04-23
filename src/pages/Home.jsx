@@ -79,7 +79,7 @@ var Home = () => {
 
     useEffect(() => {
 
-        const nuevoFiltroBotones = { ...filtro, ordenAlfabetico: null, ordenReview: null, vistas: null }
+        const nuevoFiltroBotones = { ...filtro, ordenAlfabetico: null, ordenReview: null, vistas: null, ordenFecha: null }
 
         if (filtroBotones.includes("AZ")) {
             nuevoFiltroBotones.ordenAlfabetico = "AZ"

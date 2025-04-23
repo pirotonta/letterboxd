@@ -6,7 +6,7 @@ const BarraFiltros = ({ cambioFiltro, filtro }) => {
     return (
         <div className="barra-filtros">
             <label htmlFor="genero">Género:</label>
-            <select id="genero" onChange={(e) => cambioFiltro("genero", e.target)}>
+            <select id="genero" onChange={(event) => cambioFiltro("genero", event.target)}>
                 <option value="">Todos</option>
                 <option value="Acción">Acción</option>
                 <option value="Comedia">Comedia</option>
@@ -18,8 +18,8 @@ const BarraFiltros = ({ cambioFiltro, filtro }) => {
                 <option value="Fantasía">Fantasía</option>
             </select><br></br>
             <label htmlFor="ordenar">Tipo:</label>
-            <input type="checkbox" checked={filtro.tipo.includes('pelicula')} name="tipo" value="pelicula" onChange={(e) => cambioFiltro("tipo", e.target)} /> Película
-            <input type="checkbox" checked={filtro.tipo.includes('serie')} name="tipo" value="serie" onChange={(e) => cambioFiltro("tipo", e.target)} /> Serie
+            <input type="checkbox" checked={filtro.tipo.includes('pelicula')} name="tipo" value="pelicula" onChange={(event) => cambioFiltro("tipo", event.target)} /> Película
+            <input type="checkbox" checked={filtro.tipo.includes('serie')} name="tipo" value="serie" onChange={(event) => cambioFiltro("tipo", event.target)} /> Serie
         </div>
     )
 
