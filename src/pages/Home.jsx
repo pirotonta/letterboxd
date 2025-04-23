@@ -14,7 +14,7 @@ import GatoContador from '../components/GatoContador/GatoContador.jsx'
 var Home = () => {
     const {peliculas, agregarPelicula, editarPelicula, eliminarPelicula} = usePelicula()
     const [peliculasFiltradas, setPeliculasFiltradas] = useState([]);
-    const [filtro, setFiltro] = useState({ barraBusqueda: "", genero: null, tipo: ["pelicula", "serie"], vistas: null, ordenAlfabetico: null, ordenReview: null });
+    const [filtro, setFiltro] = useState({ barraBusqueda: "", genero: null, tipo: ["pelicula", "serie"], vistas: null, ordenAlfabetico: null, ordenReview: null, ordenFecha: null });
     const [filtroBotones, setFiltroBotones] = useState([]);
     const [agregarNuevaPelicula, setAgregarNuevaPelicula] = useState(false);
 
@@ -99,6 +99,12 @@ var Home = () => {
             nuevoFiltroBotones.vistas = "noVistas"
         }
 
+        if (filtroBotones.includes("fechaDesc")) {
+            nuevoFiltroBotones.ordenFecha = "fechaDesc"
+        } else if (filtroBotones.includes("fechaAsc")){
+            nuevoFiltroBotones.ordenFecha = "fechaAsc"
+        }
+
         setFiltro(nuevoFiltroBotones)
 
     }, [filtroBotones]);
@@ -135,6 +141,13 @@ var Home = () => {
                 const bVal = b.review === "no la vi" ? (ascendente ? 6 : -1) : Number(b.review);
                 return ascendente ? aVal - bVal : bVal - aVal;
             });
+        }
+
+        if (filtro.ordenFecha){
+            const ascendente = filtro.ordenFecha === "fechaAsc";
+            peliculasOrdenadas.sort((a, b) =>
+                ascendente ? a.anio - b.anio : b.anio - a.anio
+            );
         }
 
         setPeliculasFiltradas(peliculasOrdenadas);

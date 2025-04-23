@@ -1,5 +1,7 @@
 .barra-botones {
-    gap: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 2 columns */
+    grid-template-rows: repeat(2, auto);   /* 4 rows */
     margin-left: auto;
     z-index: 101;
 }
