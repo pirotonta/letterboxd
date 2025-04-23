@@ -1,4 +1,4 @@
-────────────────────────────────────────୨ৎ────────────────────────────────────────
+───────────────────────────────୨ৎ───────────────────────────────
 # *TPO 2 - React 𖹭.ᐟ* 
 [¡Click para ejecutarlo en Vercel! ૮₍ ´ ꒳ `₎ა](https://letterboxd-vert.vercel.app/)
 
@@ -8,9 +8,8 @@ Integrantes:
 - Moreno Gisella FAI-[4201] ୨ৎ
 
 # ୨ৎ ¿De qué trata el proyecto? ᰔ
-El proyecto realizado es un gestor de películas y series,
-donde se brindan diversas funciones interactivas.
-Dichas funciones son:
+El proyecto realizado es un gestor personal de películas y series.
+Se dispone de las siguientes funcionalidades:
 
 ♡  Añadir nuevas entradas por medio de un formulario.
 
@@ -19,21 +18,23 @@ Dichas funciones son:
 ♡︎  Se proporciona una gran y poderosa herramienta de filtro, donde se pueden filtrar 
 todos los registros existentes a gusto del usuario. 
 Los criterios de filtrado son los siguientes:
+- Barra de búsqueda (buscar por título)
 - Género
 - Tipo (película/serie)
 - Visualización (vista o no vista)
+- Orden alfabético (A-Z y Z-A)
 - Review/valoración (creciente y decrecientemente)
 - Orden alfabético (A-Z y Z-A)
-- Barra de búsqueda (buscar por nombre)
+- Orden cronológico (creciente y decrecientemente)
 
-Todos los filtros seleccionados funcionarán en conjunto.
+Todos los filtros seleccionados funcionan en conjunto.
 
-♡︎  Se cuenta con un asistente gatuno que al momento de clickearlo, le informará al usuario 
+♡︎  Se cuenta con un asistente gatuno que al momento de clickearlo, le informa al usuario 
 cuantas películas y series vio, así como también, cuantas 
 películas y series están esperando en su watchlist.
 
 <p align="center">
-    <img src="./src/assets/appreact.gif" width="500px"/>
+    <img src="./public/appreactpreview.gif" width="500px"/>
 </p>
 
 # ୨ৎ Instrucciones de instalación ᰔ
@@ -80,4 +81,4 @@ restantes utilizados en el proyecto.
    - Configurar scripts que pueden correr (por ejemplo, npm run dev, npm run build, npm run lint, etc.)
 
 
-────────────────────────────────────────୨ৎ────────────────────────────────────────
+───────────────────────────────୨ৎ───────────────────────────────
