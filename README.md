@@ -34,7 +34,7 @@ cuantas películas y series vio, así como también, cuantas
 películas y series están esperando en su watchlist.
 
 <p align="center">
-    <img src="./public/appreactpreview.gif" width="500px"/>
+    <img src="./public/appreactpreview.gif" width="1200px"/>
 </p>
 
 # ୨ৎ Instrucciones de instalación ᰔ
