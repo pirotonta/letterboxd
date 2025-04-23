@@ -36,7 +36,7 @@ const FormularioEntrada = ({ onSubmit }) => {
         <label htmlFor="review">Review</label>
         <Review />
         <br></br>
-        <Boton texto="enviar" icon={Save} onClick={onSubmit} />
+        <Boton texto="enviar" icon={Save} type="submit" />
       </form>
     </div>
   );
