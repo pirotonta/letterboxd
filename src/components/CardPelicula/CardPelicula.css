@@ -4,7 +4,7 @@
     padding: 0.8rem 0.8rem 1.2rem 0.8rem;
     color: #fff;
     width: 200px;
-    min-height: 465px;
+    height: 465px;
     position: relative;
     box-shadow: 0 4px 10px black;
     display: flex;
@@ -100,7 +100,6 @@
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 0.4rem;
-    margin-top: 0.5rem;
 }
 
 /* .form-editar input {
@@ -118,25 +117,16 @@
 .form-editar input, .form-editar select {
   box-sizing: border-box;
   width: 84px;
-  padding: 0.rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   border-radius: 5px;
   border: 1px solid #aaa;
   background-color: #2a1f35;
   color: white;
 }
 
-.form-editar .img{
+.form-editar .el-input-largo{
     flex: 1 1 100%;
 }
-
-.form-editar .review{
-    font-size: 0.2rem;
-    margin: 0px;
-    padding: 0px;
-    width: 84px;
-}
-
 
 .form-editar input:focus {
     border: 1px solid #a678de;
@@ -144,9 +134,16 @@
 }
 
 .botones-formulario-editar {
-    margin-top: 5px;
     grid-column: span 2;
     display: flex;
     justify-content: center;
     gap: 0.5rem;
+    margin-top: 3px;
+}
+
+.botones-formulario-editar .boton{
+    width: 35px;
+    height: 35px;
+    margin: 0px;
+    padding: 0.4rem;
 }

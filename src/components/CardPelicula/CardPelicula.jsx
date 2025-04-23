@@ -48,14 +48,14 @@ const CardPelicula = ({ id, imagen, titulo, tipo, director, anio, genero, review
             <div className="card-pelicula">
                 <img src={imagen} width="150" height="225"></img>
                 <form onSubmit={submitHandler} className="form-editar">
-                    <input className="img" name="urlImg" value={pelicula.urlImg} onChange={cambiosHandler} />
+                    <input className="el-input-largo" name="urlImg" value={pelicula.urlImg} onChange={cambiosHandler} />
+                    {/* <input name="tipo" value={pelicula.tipo} onChange={cambiosHandler} /> */}
+                    <input className="el-input-largo" name="titulo" value={pelicula.titulo} onChange={cambiosHandler} />
+                    <input className="el-input-largo" name="director" value={pelicula.director} onChange={cambiosHandler} />
                     <select name="tipo" value={pelicula.tipo} onChange={cambiosHandler}>
                         <option value="pelicula">pelicula</option>
                         <option value="serie">serie</option>
                     </select>
-                    {/* <input name="tipo" value={pelicula.tipo} onChange={cambiosHandler} /> */}
-                    <input name="titulo" value={pelicula.titulo} onChange={cambiosHandler} />
-                    <input name="director" value={pelicula.director} onChange={cambiosHandler} />
                     <input name="anio" value={pelicula.anio} onChange={cambiosHandler} />
                     {/* <input name="genero" value={pelicula.genero} onChange={cambiosHandler} /> */}
                     <select name="genero" value={pelicula.genero} onChange={cambiosHandler}>
