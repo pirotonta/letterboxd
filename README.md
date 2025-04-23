@@ -1,5 +1,6 @@
-꒷︶꒷꒥꒷‧₊˚꒷︶꒷꒥꒷‧꒷︶꒷꒥꒷‧₊˚꒷︶꒷꒥꒷‧꒷︶꒷꒥꒷‧₊˚꒷︶꒷꒥꒷‧꒷︶꒷꒥꒷‧₊˚꒷︶꒷꒥꒷‧꒷︶꒷꒥꒷‧₊˚꒷︶꒷꒥꒷‧
-# *TPO 2 - React 𖹭.ᐟ*
+────────────────────────────────────────୨ৎ────────────────────────────────────────
+# *TPO 2 - React 𖹭.ᐟ* 
+[¡Click para ejecutarlo en Vercel! ૮₍ ´ ꒳ `₎ა](https://letterboxd-vert.vercel.app/)
 
 # ୨ৎ Grupo "corazon" ᰔ
 Integrantes:                           
@@ -11,13 +12,13 @@ El proyecto realizado es un gestor de películas y series,
 donde se brindan diversas funciones interactivas.
 Dichas funciones son:
 
-♡︎ Añadir nuevas entradas por medio de un formulario.
+♡  Añadir nuevas entradas por medio de un formulario.
 
-♡︎ Los registros pueden editarse y también eliminarse.
+♡︎  Los registros pueden editarse y también eliminarse.
 
-♡︎ Se proporciona un gran y poderoso filtro donde se pueden filtrar 
-todos los registros existentes a gusto del usuario.
-Los filtros disponibles son:
+♡︎  Se proporciona una gran y poderosa herramienta de filtro, donde se pueden filtrar 
+todos los registros existentes a gusto del usuario. 
+Los criterios de filtrado son los siguientes:
 - Género
 - Tipo (película/serie)
 - Visualización (vista o no vista)
@@ -27,25 +28,38 @@ Los filtros disponibles son:
 
 Todos los filtros seleccionados funcionarán en conjunto.
 
+♡︎  Se cuenta con un asistente gatuno que al momento de clickearlo, le informará al usuario 
+cuantas películas y series vio, así como también, cuantas 
+películas y series están esperando en su watchlist.
+
 <p align="center">
     <img src="./src/assets/appreact.gif" width="500px"/>
 </p>
 
-# ୨ৎ Instrucciones de instalación ᰔ ˶ᵔ ᵕ ᵔ˶.ᐟ
+# ୨ৎ Instrucciones de instalación ᰔ
 1. Dentro de tu IDE de preferencia, posicionarte 
     en la carpeta donde deseas guardar el proyecto.
-    Ingresar en la consola el comando: git clone https://github.com/pirotonta/letterboxd
+    Ingresar en la consola el comando:
+    ```markdown
+    git clone https://github.com/pirotonta/letterboxd
+    ```
     
-2. Acceder a la carpeta recién creada con el proyecto,
+3. Acceder a la carpeta recién creada con el proyecto,
     e instalar las dependencias necesarias:
     - Node JS 🡆 https://nodejs.org/en/download
-    - Lucide 🡆 npm install lucide-react
+    - Instalar Lucide (para iconos)
+    ```markdown
+    npm install lucide-react
+    ```
 
-3. Ingresar en la consola los siguientes comandos:
-   - npm install
-   - npm run dev
-
-4. Enjoy ૮ ˶ᵔ ᵕ ᵔ˶ ა .ᐟ.ᐟ
+4. Ingresar en la consola los siguientes comandos:
+    ```markdown
+    npm install
+    ```
+    ```markdown
+    npm run dev
+    ```
+6. Enjoy ૮ ˶ᵔ ᵕ ᵔ˶ ა .ᐟ.ᐟ
 
 # ୨ৎ Función de archivos iniciales ᰔ
 1. index.jsx: Es el punto de entrada principal en la aplicación. Es el archivo donde se conecta React
@@ -66,4 +80,4 @@ restantes utilizados en el proyecto.
    - Configurar scripts que pueden correr (por ejemplo, npm run dev, npm run build, npm run lint, etc.)
 
 
-꒷︶꒷꒥꒷‧₊˚꒷︶꒷꒥꒷‧꒷︶꒷꒥꒷‧₊˚꒷︶꒷꒥꒷‧꒷︶꒷꒥꒷‧₊˚꒷︶꒷꒥꒷‧꒷︶꒷꒥꒷‧₊˚꒷︶꒷꒥꒷‧꒷︶꒷꒥꒷‧₊˚꒷︶꒷꒥꒷‧
+────────────────────────────────────────୨ৎ────────────────────────────────────────
