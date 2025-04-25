@@ -1,3 +1,10 @@
+.review{
+  grid-column: 2 / span 2;
+  display: flex;
+  justify-content: left;
+  height: 60px;
+}
+
 .stars,
 .no-vista {
   border: none;
@@ -30,7 +37,7 @@
 
 .novista {
   justify-content: center;
-  margin-top: 1.15em;
+  margin-top: 1.1rem;
 }
 
 .no-vista:not(:checked)>label:hover {

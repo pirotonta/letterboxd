@@ -1,11 +1,6 @@
-import './BarraBotones.css';
+import Style from './BarraBotones.module.css';
 import Boton from "../Boton/Boton";
-import { CalendarArrowDown, CalendarArrowUp, CirclePlus } from "lucide-react";
-import { ArrowDownAz } from "lucide-react";
-import { ArrowUpAZ } from "lucide-react";
-import { ArrowDown01 } from "lucide-react";
-import { ArrowUp01 } from "lucide-react";
-import { Eye, EyeOff } from "lucide-react";
+import { CalendarArrowDown, CalendarArrowUp, CirclePlus, ArrowDownAz, ArrowUpAZ, ArrowDown01, ArrowUp01, Eye, EyeOff } from "lucide-react";
 import { useState } from 'react';
 
 
@@ -56,18 +51,18 @@ const BarraBotones = ({ onClickNuevaPelícula, filtroBotonHandler }) => {
     };
 
     return (
-        <div className="barra-botones">
+        <div className={Style.barrabotones}>
             <Boton texto="Agregar película" icon={CirclePlus} onClick={onClickNuevaPelícula} />
             <Boton texto="Ordenar alfabéticamente" icon={ArrowDownAz}
-                onClick={() => { handleBotonClick("AZ") }} className={botonesActivos.includes("AZ") ? 'active' : ''} />
+                onClick={() => handleBotonClick("AZ")} className={botonesActivos.includes("AZ") ? 'active' : ''} />
             <Boton texto="Ordenar por reseña" icon={ArrowDown01}
                 onClick={() => handleBotonClick("01")} className={botonesActivos.includes("01") ? 'active' : ''} />
             <Boton texto="Ordenar por fecha" icon={CalendarArrowDown}
                 onClick={() => handleBotonClick("fechaDesc")} className={botonesActivos.includes("fechaDesc") ? 'active' : ''} />
             <Boton texto="Vistas/no vistas" icon={botonesActivos.includes("noVistas") ? EyeOff : Eye}
-                onClick={() => { handleBotonClick("vistas") }} className={botonesActivos.includes("vistas") || botonesActivos.includes("noVistas") ? 'active' : ''} />
+                onClick={() => handleBotonClick("vistas")} className={botonesActivos.includes("vistas") || botonesActivos.includes("noVistas") ? 'active' : ''} />
             <Boton texto="Ordenar alfabéticamente" icon={ArrowUpAZ}
-                onClick={() => { handleBotonClick("ZA") }} className={botonesActivos.includes("ZA") ? 'active' : ''} />
+                onClick={() => handleBotonClick("ZA")} className={botonesActivos.includes("ZA") ? 'active' : ''} />
             <Boton texto="Ordenar por reseña" icon={ArrowUp01}
                 onClick={() => handleBotonClick("10")} className={botonesActivos.includes("10") ? 'active' : ''} />
             <Boton texto="Ordenar por fecha" icon={CalendarArrowUp}

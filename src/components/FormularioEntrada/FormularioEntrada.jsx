@@ -1,14 +1,14 @@
-import './FormularioEntrada.css';
+import Style from './FormularioEntrada.module.css';
 import Review from "../Review/Review";
 import Boton from "../Boton/Boton";
 import { Save } from 'lucide-react';
 
 const FormularioEntrada = ({ onSubmit }) => {
   return (
-    <div className="nuevaPelicula">
+    <div className={Style.nuevaPelicula}>
       <h4>Nueva entrada</h4>
-      <form className="form-entrada" onSubmit={onSubmit}>
-        <div className="radio-tipo">
+      <form className={Style["form-entrada"]} onSubmit={onSubmit}>
+        <div className={Style["radio-tipo"]}>
           <label htmlFor="tipo">Tipo</label>
           <input required type="radio" name="tipo" value="pelicula" /> Película
           <input required type="radio" name="tipo" value="serie" /> Serie

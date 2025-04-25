@@ -1,10 +1,10 @@
-import './Titulo.css';
+import Style from './Titulo.module.css';
 
 const Titulo = ({texto, logo}) => {
     return (
-        <div className="barra-titulo">
+        <div className={Style["barra-titulo"]}>
             <img src={logo}></img>
-            <h1 className="titulo">
+            <h1 className={Style.titulo}>
                 {texto}
             </h1>
         </div>

@@ -1,4 +1,4 @@
-import './Home.css'
+import Style from './Home.module.css'
 import Titulo from '../components/Titulo/Titulo.jsx'
 import FormularioEntrada from '../components/FormularioEntrada/FormularioEntrada.jsx'
 import CardPelicula from '../components/CardPelicula/CardPelicula.jsx'
@@ -155,10 +155,10 @@ var Home = () => {
 
 
     return (
-        <div className="principal">
+        <div className={Style.principal}>
             <Titulo texto="pelis & series" logo="https://i.imgur.com/n2PlzFV.png" />
 
-            <div className="barras-filtrado">
+            <div className={Style["barras-filtrado"]}>
                 <GatoContador peliculas={peliculas}/>
                 <BarraBusqueda setBusqueda={busquedaHandler} />
                 <BarraFiltros filtro={filtro} cambioFiltro={filtroGeneroTipoHandler} />
@@ -172,11 +172,11 @@ var Home = () => {
                 </Modal>
             )}
 
-            <div className="contador-filtradas">
+            <div className={Style["contador-filtradas"]}>
                 mostrando {peliculasFiltradas.length} de {peliculas.length} películas/series
             </div>
 
-            <div className="contenedor-pelis">
+            <div className={Style["contenedor-pelis"]}>
                 {peliculasFiltradas.length > 0 ? (
                     (peliculasFiltradas.map((pelicula) => {
                         return (
@@ -188,7 +188,7 @@ var Home = () => {
                         )
                     }))
                 ) : (
-                    <div className="no-hay-pelis"> No hay películas o series para mostrar.</div>
+                    <div className={Style["no-hay-pelis"]}> No hay películas o series para mostrar.</div>
                 )}
             </div>
         </div>

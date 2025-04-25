@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import './GatoContador.css';
+import Style from './GatoContador.module.css';
 
 const GatoContador = ({ peliculas }) => {
 
@@ -50,13 +50,13 @@ const GatoContador = ({ peliculas }) => {
     }
 
     return (
-        <div className="gato-container">
-            <div className="gato-contador">
-                <img src={gatoVista ? bongoCat.vistas : bongoCat.noVistas} alt="Gato contador" className="gato-contador-img" onClick={handleClickGato} />
+        <div className={Style["gato-container"]}>
+            <div className={Style["gato-contador"]}>
+                <img src={gatoVista ? bongoCat.vistas : bongoCat.noVistas} alt="Gato contador" className={Style["gato-contador-img"]} onClick={handleClickGato} />
             </div>
-            <div className="gato-dialogo">
-                <img src="https://i.imgur.com/cqBrsZW.png" alt="dialogo" className="gato-dialogo-img" />
-                <div className="gato-dialogo-text">
+            <div className={Style["gato-dialogo"]}>
+                <img src="https://i.imgur.com/cqBrsZW.png" alt="dialogo" className={Style["gato-dialogo-img"]} />
+                <div className={Style["gato-dialogo-text"]}>
                     {gatoVista
                         ? mostrarTexto(vistasPeliculas, vistasSeries, "vistas")
                         : mostrarTexto(noVistasPeliculas, noVistasSeries, "no vistas")}

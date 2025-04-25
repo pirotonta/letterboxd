@@ -1,10 +1,9 @@
-import './BarraFiltros.css';
-import React from 'react';
+import Style from './BarraFiltros.module.css';
 
 const BarraFiltros = ({ cambioFiltro, filtro }) => {
 
     return (
-        <div className="barra-filtros">
+        <div className={Style.barrafiltros}>
             <label htmlFor="genero">Género:</label>
             <select id="genero" onChange={(event) => cambioFiltro("genero", event.target)}>
                 <option value="">Todos</option>

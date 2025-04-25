@@ -1,5 +1,5 @@
-.barra-filtros select,
-.barra-filtros input[type="radio"] {
+.barrafiltros select,
+.barrafiltros input[type="radio"] {
     background-color: #1e1820;
     color: #fff;
     border: 1px solid, rgb(180, 130, 176);
@@ -9,27 +9,27 @@
     margin: 10px 0px;
 }
 
-.barra-filtros input[type="radio"] {
+.barrafiltros input[type="radio"] {
     margin: 0px 5px;
 }
 
-.barra-filtros label {
+.barrafiltros label {
     font-weight: 500;
     margin-right: 0.5rem;
 }
 
-.barra-filtros select:focus,
-.barra-filtros input[type="radio"]:focus {
+.barrafiltros select:focus,
+.barrafiltros input[type="radio"]:focus {
     outline: none;
 }
 
-.barra-filtros .radio-group {
+.barrafiltros .radio-group {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.barra-filtros .radio-group label {
+.barrafiltros .radio-group label {
     display: flex;
     align-items: center;
     gap: 0.25rem;

@@ -9,6 +9,7 @@
     border-image: url(../assets/blacklace.png) 18 round;
     background-clip: padding-box;
     min-width: 1200px;
+    max-width: 1200px;
     min-height: 1000px;
 }
 

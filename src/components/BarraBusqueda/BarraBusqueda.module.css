@@ -1,10 +1,10 @@
-.barra-busqueda {
+.barrabusqueda {
     margin: 1rem 0;
     display: flex;
     justify-content: center;
 }
 
-.barra-busqueda input {
+.barrabusqueda input {
     width: 100%;
     max-width: 600px;
     padding: 0.5rem;
@@ -16,15 +16,15 @@
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.barra-busqueda input[type="text"]::placeholder {
+.barrabusqueda input[type="text"]::placeholder {
     color: #a5a5a5;
 }
 
-.barra-busqueda input[type="text"]:focus {
+.barrabusqueda input[type="text"]:focus {
     border-color: #e7e8e8;
     box-shadow: 0 0 5px rgba(196, 196, 196, 0.5);
 }
 
-.barra-busqueda input[type="text"]:focus::placeholder {
+.barrabusqueda input[type="text"]:focus::placeholder {
     color: transparent;
 }

@@ -1,8 +1,9 @@
-import './Boton.css';
+import Style from './Boton.module.css';
 
-const Boton = ({ texto, className, icon: Icon, onClick, ...props}) => {
+const Boton = ({ texto, className = '', icon: Icon, onClick, ...props}) => {
+    const laClaseArmada = `${Style.boton} ${className === 'active' ? Style.active : ''}`.trim();
     return (
-        <button className={`boton ${className}`} onClick={onClick} {...props}>
+        <button className={laClaseArmada} onClick={onClick} {...props}>
             <Icon alt={texto}/>
         </button>
     );

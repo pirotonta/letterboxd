@@ -1,4 +1,4 @@
-import './BarraBusqueda.css';
+import Style from './BarraBusqueda.module.css';
 
 const BarraBusqueda = ({ setBusqueda }) => {
   const handleChange = (cambio) => {
@@ -6,7 +6,7 @@ const BarraBusqueda = ({ setBusqueda }) => {
   };
 
   return (
-    <div className="barra-busqueda">
+    <div className={Style.barrabusqueda}>
       <input
         type="text"
         placeholder="buscar..."

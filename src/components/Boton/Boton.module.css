@@ -17,13 +17,13 @@
     border-radius: 5px;
 }
 
-.boton.active {
+.active {
     background-color: rgb(180, 130, 176);
     border-color: #ffffff;
     transform: scale(1.05);
 }
 
-.boton.active:hover {
+.active:hover {
     background-color: rgb(222, 179, 219);
     border-color: #ffffff;
     transform: scale(1.05);

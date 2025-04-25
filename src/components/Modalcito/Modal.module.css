@@ -23,7 +23,7 @@
     z-index: 1001;
 }
 
-.el-boton .boton {
+.modal-contenido .el-boton{
     position: absolute;
     top: 1rem;
     right: 1rem;

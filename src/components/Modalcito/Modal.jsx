@@ -1,16 +1,16 @@
-import './Modal.css';
+import Style from './Modal.module.css';
 import Boton from '../Boton/Boton';
 import { CircleX } from 'lucide-react';
 
 const Modal = ({ children, cerrarModal }) => {
 
     return (
-        <div className="modal-overlay" onClick={cerrarModal}>
-            <div className="modal-contenido">
-                <div className="el-boton">
-                    <Boton texto="Cerrar" icon={CircleX} onClick={cerrarModal} className="boton-cerrar" />
+        <div className={Style["modal-overlay"]} onClick={cerrarModal}>
+            <div className={Style["modal-contenido"]}>
+                <div className={Style["el-boton"]}>
+                    <Boton texto="Cerrar" icon={CircleX} onClick={cerrarModal}/>
                 </div>
-                <div className="el-contenido-fr" onClick={(event) => event.stopPropagation()}>
+                <div className={Style["el-contenido-fr"]} onClick={(event) => event.stopPropagation()}>
                     {children}
                 </div>
             </div>
