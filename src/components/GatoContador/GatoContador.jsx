@@ -40,6 +40,7 @@ const GatoContador = ({ peliculas }) => {
         return textoFinal;
     };
 
+    //Esto se podria mover por fuera del componente
     const bongoCat = {
         vistas: "https://i.imgur.com/Ybcw3Gv.png",
         noVistas: "https://i.imgur.com/wCELf0p.png"

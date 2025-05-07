@@ -1,4 +1,19 @@
+
+Correcciones:
+Hermosa UI. MUY limpia, ordenada y bella. Un gran trabajo de css con muchisima atencion al detalle.
+Me gusto el uso de usePelicula para reutilizar codigo. Es algo que no vimos pero pudieron resolverlo igual.
+UX original con el gato contador, divertido y útil.
+Codigo bien estructurado, bien modularizado, componentes simples y reutilizables.
+Beun uso de mockdata en un archivo independiente.
+
+Observaciones:
+Se que hay confianza, pero no dejen nombres 'divertidos' o poco serios en la entrega. 
+
+Nota: 10
+
 ───────────────────────────────୨ৎ───────────────────────────────
+
+
 # *TP 1 - React 𖹭.ᐟ* 
 [¡Click para ejecutarlo en Vercel! ૮₍ ´ ꒳ `₎ა](https://letterboxd-vert.vercel.app/)
 
