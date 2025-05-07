@@ -46,6 +46,7 @@ const CardPelicula = ({ id, imagen, titulo, tipo, director, anio, genero, review
         editarPelicula ? (
             <div className={Style["card-pelicula"]}>
                 <img src={imagen} width="150" height="225"></img>
+                {/* Si usan submitHandler aca no lo usen en el boton. Se dispara dos veces */}
                 <form onSubmit={submitHandler} className={Style["form-editar"]}>
                     <input className={Style["el-input-largo"]} name="urlImg" value={pelicula.urlImg} onChange={cambiosHandler} />
                     <input className={Style["el-input-largo"]} name="titulo" value={pelicula.titulo} onChange={cambiosHandler} />
@@ -74,12 +75,15 @@ const CardPelicula = ({ id, imagen, titulo, tipo, director, anio, genero, review
                         <option value="no la vi">no la vi</option>
                     </select>
                     <div className={Style["botones-formulario-editar"]}>
+                        {/* Este boton deberia ser type submit y no tener este onclick */}
                     <Boton texto="Guardar" icon={Save} onClick={submitHandler} />
                     <Boton texto="Cancelar" icon={XCircle} onClick={() => setEditarPelicula(false)} />
                     </div>
                 </form>
             </div>
+        
         ) : (
+            // tuvequehacerloporelmodal? 
             <div className={Style.tuvequehacerloporelmodal}>
             <div className={Style["card-pelicula"]}>
             <img src={imagen} width="150" height="225"></img>
@@ -92,6 +96,7 @@ const CardPelicula = ({ id, imagen, titulo, tipo, director, anio, genero, review
                         <h4>género:</h4> {genero}
                         <br></br>
                         <h4>review: </h4>
+                        {/* Siempre comparen con === */}
                         {(review == "no la vi") ?
                             (<EyeOff className={Style["el-ojo"]}/>)
                             :

@@ -19,6 +19,7 @@ const FormularioEntrada = ({ onSubmit }) => {
         <label htmlFor="director">Director</label>
         <input required type="text" name="director" placeholder="director" />
         <label htmlFor="anio">Año</label>
+        {/* anio deberia ser number */}
         <input required type="text" name="anio" placeholder="año" />
         <label htmlFor="genero">Género</label>
         <select required name="genero" id="genero">

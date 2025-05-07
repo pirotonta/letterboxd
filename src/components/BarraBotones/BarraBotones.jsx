@@ -22,7 +22,7 @@ const BarraBotones = ({ onClickNuevaPelícula, filtroBotonHandler }) => {
 
         setBotonesActivos(prev => {
             let nuevosBotones;
-
+//botonCliqueao ??? Usar algo como clickedButton o botonSeleccionado
             if (botonCliqueao === "vistas" || botonCliqueao === "noVistas") {
                 if (!prev.includes("vistas") && !prev.includes("noVistas")) {
                     nuevosBotones = [...prev, "vistas"];
